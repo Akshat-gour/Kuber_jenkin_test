@@ -1,6 +1,6 @@
 import React from 'react';
 import { render,screen } from '@testing-library/react';
-import Banner from '../components/Banner/Banner';
+import Banner from './components/Banner/Banner';
 
 describe('Banner', () => {
   it('should render a <div> with class "banner"', () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import CoinsTable from './../components/CoinsTable'
+import CoinsTable from '../components/CoinsTable'
 import '@testing-library/jest-dom/extend-expect'
 
 describe('Input value', () => {
