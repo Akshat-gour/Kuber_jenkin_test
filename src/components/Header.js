@@ -41,13 +41,14 @@ function Header() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <AppBar color="transparent" position="static">
+      <AppBar color="transparent" position="static" data-testid="appbar">
         <Container>
           <Toolbar>
             <Typography
               onClick={() => history.push(`/`)}
               variant="h6"
               className={classes.title}
+              data-testid="heading"
             >
               Crypto Hunter
             </Typography>
@@ -59,6 +60,7 @@ function Header() {
               value={currency}
               style={{ width: 100, height: 40, marginLeft: 15 }}
               onChange={(e) => setCurrency(e.target.value)}
+              data-testid="currency"
             >
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"INR"}>INR</MenuItem>
