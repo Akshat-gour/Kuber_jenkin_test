@@ -16,12 +16,12 @@ pipeline {
                 
             }
         }
-        //  stage('Test') { 
-        //     steps {
-        //         echo "testing stage"
-        //         bat "npm test"
-        //     }
-        // }
+         stage('Test') { 
+            steps {
+                echo "testing stage"
+                bat "npm test"
+            }
+        }
          
          stage('Deploy') { 
             steps {
