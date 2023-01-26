@@ -101,7 +101,7 @@ export default function CoinsTable() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} data-testid="table">
           {loading ? (
             <LinearProgress style={{ backgroundColor: "gold" }} />
           ) : (

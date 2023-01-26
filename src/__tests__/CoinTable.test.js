@@ -16,4 +16,10 @@ describe('Input value', () => {
       fireEvent.change(searchInput, { target: { value: 'test' } })
       expect(searchInput.value).toBe('test') 
     })
-  })
+
+    it('renders in table rows based on provided columns', () => {
+        render(<CoinsTable />)
+        const table = screen.getByTestId('table')
+        expect(table).toBeTruthy();
+    });
+})
