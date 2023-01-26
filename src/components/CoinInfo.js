@@ -39,7 +39,7 @@ const CoinInfo = ({ coin }) => {
   const classes = useStyles();
 
   const fetchHistoricData = async () => {
-    const { data } = await axios.get(HistoricalChart(coin.id, days, currency));
+    const { data } = await axios.get(HistoricalChart(coin?.id, days, currency));
     setflag(true);
     setHistoricData(data.prices);
   };
@@ -62,12 +62,13 @@ const CoinInfo = ({ coin }) => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <div className={classes.container}>
+      <div className={classes.container} data-testid="div-theme">
         {!historicData | flag===false ? (
           <CircularProgress
             style={{ color: "gold" }}
             size={250}
             thickness={1}
+            data-testid="circular-progress"
           />
         ) : (
           <>
@@ -97,6 +98,7 @@ const CoinInfo = ({ coin }) => {
                   },
                 },
               }}
+              data-testid="line"
             />
             <div
               style={{
@@ -113,6 +115,7 @@ const CoinInfo = ({ coin }) => {
                     setflag(false);
                   }}
                   selected={day.value === days}
+                  data-testid="select-button"
                 >
                   {day.label}
                 </SelectButton>
