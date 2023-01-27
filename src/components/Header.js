@@ -17,7 +17,7 @@ import { CryptoState } from "../CryptoContext";
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
-    color: "gold",
+    color: "#76ff03",
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
@@ -50,9 +50,8 @@ function Header() {
               className={classes.title}
               data-testid="heading"
             >
-              Crypto Hunter
+              CryptoPulse
             </Typography>
-            {/* <Button color="inherit">Login</Button> */}
             <Select
               variant="outlined"
               labelId="demo-simple-select-label"
@@ -62,8 +61,8 @@ function Header() {
               onChange={(e) => setCurrency(e.target.value)}
               data-testid="currency"
             >
-              <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"USD"}>USD($)</MenuItem>
+              <MenuItem value={"INR"}>IND(₹)</MenuItem>
             </Select>
           </Toolbar>
         </Container>
